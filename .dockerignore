@@ -1,0 +1,28 @@
+# Build outputs
+target/
+*.jar
+*.class
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Git
+.git/
+.gitignore
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docs (not needed in image)
+README.md
+HELP.md
+
+Dockerfile
+.dockerignore
