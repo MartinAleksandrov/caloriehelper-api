@@ -3,6 +3,8 @@ package com.caloriehelper.api.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.time.Instant;
@@ -28,6 +30,7 @@ public class MealEntry {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "food_id", nullable = false, foreignKey = @ForeignKey(name = "fk_meal_food"))
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Food food;
 
     @NotNull
